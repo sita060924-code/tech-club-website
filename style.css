@@ -10,6 +10,7 @@ body {
     background: #050816;
     color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* =========================
@@ -166,8 +167,7 @@ nav {
 
     background: rgba(255, 255, 255, 0.04);
 
-    box-shadow:
-        0 0 60px rgba(103, 232, 249, 0.12);
+    box-shadow: 0 0 60px rgba(103, 232, 249, 0.12);
 
     animation: floating 4s ease-in-out infinite;
 }
@@ -267,7 +267,6 @@ nav {
 
 .card {
     padding: 30px;
-
     min-height: 230px;
 
     border-radius: 15px;
@@ -281,11 +280,8 @@ nav {
 
 .card:hover {
     transform: translateY(-10px);
-
     border-color: #67e8f9;
-
-    box-shadow:
-        0 15px 40px rgba(103, 232, 249, 0.12);
+    box-shadow: 0 15px 40px rgba(103, 232, 249, 0.12);
 }
 
 .icon {
@@ -327,7 +323,6 @@ footer {
     padding: 40px 20px;
 
     background: #030510;
-
     color: #8d99b5;
 }
 
@@ -365,35 +360,10 @@ footer small {
    TABLET
 ========================= */
 
-@media (max-width: 900px) {
-
-    nav {
-        padding: 15px 5%;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
+@media (max-width: 1000px) {
 
     .hero {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 50px;
-        padding: 120px 6% 70px;
-    }
-
-    .hero-content {
-        width: 100%;
-        max-width: 650px;
-    }
-
-    .hero-text {
-        margin: 25px auto;
-    }
-
-    .buttons {
-        justify-content: center;
+        gap: 40px;
     }
 
     .hero-card {
@@ -407,16 +377,12 @@ footer small {
 }
 
 /* =========================
-   MOBILE
+   PHONE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
         position: relative;
@@ -449,11 +415,17 @@ footer small {
         width: 100%;
         min-height: auto;
 
-        padding: 80px 20px 70px;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: center;
 
         text-align: center;
 
-        gap: 45px;
+        padding: 65px 20px 70px;
+
+        gap: 35px;
     }
 
     .hero-content {
@@ -464,10 +436,11 @@ footer small {
     .tag {
         font-size: 10px;
         letter-spacing: 2px;
+        margin-bottom: 15px;
     }
 
     .hero h1 {
-        font-size: 58px;
+        font-size: clamp(52px, 13vw, 70px);
         line-height: 0.95;
         letter-spacing: -2px;
     }
@@ -476,9 +449,9 @@ footer small {
         width: 100%;
         max-width: 500px;
 
-        font-size: 15px;
-
         margin: 25px auto;
+
+        font-size: 15px;
     }
 
     .buttons {
@@ -496,16 +469,15 @@ footer small {
     .hero-card {
         width: 280px;
         height: 280px;
+
+        flex-shrink: 0;
     }
 
     /* SECTIONS */
 
     .section {
         width: 100%;
-        margin: 0;
-
-        padding: 80px 20px;
-
+        padding: 75px 20px;
         text-align: center;
     }
 
@@ -516,6 +488,8 @@ footer small {
 
     .section-text {
         font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /* STATS */
@@ -523,38 +497,34 @@ footer small {
     .stats {
         flex-direction: column;
         gap: 15px;
-
         margin-top: 35px;
     }
 
     .stat {
         width: 100%;
         min-width: 0;
+        text-align: center;
     }
 
     /* ACTIVITIES */
 
     .cards {
         grid-template-columns: 1fr;
-
         gap: 18px;
-
         margin-top: 35px;
     }
 
     .card {
         width: 100%;
         min-height: 200px;
-
         padding: 25px;
-
         text-align: center;
     }
 
     /* CONTACT */
 
     .contact {
-        padding: 90px 20px;
+        padding: 80px 20px;
     }
 
     /* FOOTER */
