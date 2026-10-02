@@ -533,3 +533,41 @@ footer small {
         padding: 35px 20px;
     }
 }
+/* Dark Mode Button */
+#darkModeBtn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #0b1020;
+    color: white;
+}
+
+.dark-mode nav {
+    background: #080c18;
+}
+
+.dark-mode .section,
+.dark-mode .card {
+    background: #111827;
+    color: white;
+}
+
+.dark-mode .section-text,
+.dark-mode .card p,
+.dark-mode .contact p {
+    color: #cbd5e1;
+}
+
+.dark-mode .contact {
+    background: #0f172a;
+}
+
+.dark-mode footer {
+    background: #050810;
+}
